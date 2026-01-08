@@ -7,9 +7,9 @@ export interface MCPToolParams {
   [key: string]: any;
 }
 
-export interface MCPToolResult {
+export interface MCPToolResult<T = any> {
   success: boolean;
-  data?: any;
+  data?: T;
   error?: string;
 }
 

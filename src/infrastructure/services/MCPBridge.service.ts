@@ -13,6 +13,8 @@ import type {
   MCPToolCallLog,
   MCPBridgeStats,
 } from "../../domain/interfaces";
+
+declare const __DEV__: boolean;
 import { MCPLogger } from "../utils/logger.util";
 import { MCP_BRIDGE_DEFAULTS, MCP_ERROR_CODES } from "../constants";
 

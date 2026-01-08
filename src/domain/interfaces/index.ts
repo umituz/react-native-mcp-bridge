@@ -7,3 +7,4 @@ export type {
   IMCPBridgeConfig,
   MCPBridgeStats,
 } from "./bridge.interface";
+export * from "../entities/tool.entity";

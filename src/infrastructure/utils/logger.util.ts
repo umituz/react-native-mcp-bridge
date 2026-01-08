@@ -5,6 +5,8 @@
 
 import type { MCPToolCallLog } from "../../domain/entities";
 
+declare const __DEV__: boolean;
+
 export class MCPLogger {
   private logs: MCPToolCallLog[] = [];
   private maxLogs: number;
