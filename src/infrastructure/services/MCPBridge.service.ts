@@ -49,7 +49,7 @@ export class MCPBridge implements IMCPBridge {
       metadata: {
         name: tool.name,
         description: tool.description,
-        category: tool.category,
+        category: tool.category as any,
         timeout: tool.timeout ?? this.config.defaultTimeout,
         callCount: 0,
       },
@@ -119,8 +119,8 @@ export class MCPBridge implements IMCPBridge {
 
       this.logger.log(callLog);
 
-      tool.metadata.callCount++;
-      tool.metadata.lastCalledAt = new Date();
+      (tool.metadata as any).callCount++;
+      (tool.metadata as any).lastCalledAt = new Date();
 
       return result;
     } catch (error) {
