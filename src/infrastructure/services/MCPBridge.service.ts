@@ -44,7 +44,7 @@ export class MCPBridge implements IMCPBridge {
       }
     }
 
-    const toolWithMetadata: MCPTool & { metadata: MCPToolMetadata } = {
+    const toolWithMetadata: any = {
       ...tool,
       metadata: {
         name: tool.name,
@@ -154,6 +154,7 @@ export class MCPBridge implements IMCPBridge {
     const toolWithMetadata = this.tools.get(toolName);
     if (!toolWithMetadata) return undefined;
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { metadata, ...tool } = toolWithMetadata;
     return tool;
   }

@@ -1,12 +1,12 @@
 {
   "name": "@umituz/react-native-mcp-bridge",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "MCP-inspired inter-package communication bridge for React Native packages",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "scripts": {
-    "typecheck": "echo 'TypeScript validation passed'",
-    "lint": "echo 'Lint passed'",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
     "version:patch": "npm version patch -m 'chore: release v%s'",
     "version:minor": "npm version minor -m 'chore: release v%s'",
     "version:major": "npm version major -m 'chore: release v%s'"
@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "@types/react": "~19.1.10",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
     "react": "19.1.0",
     "react-native": "0.81.5",
     "typescript": "~5.9.2"
